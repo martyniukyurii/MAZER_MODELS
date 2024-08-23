@@ -9,11 +9,11 @@ from utils.misc import logging
 # social media -> links
 
 # Agent: personal info -> name,
-# Pictures: models_id<hide>
+# Pictures: models_id<hide>, name, date, country_of_shooting, team, links, telegram_pic
 # Configuration: docs ->
-# BannedUsers: telegram_id, model_id
-# InQueue: telegram_id
-# Contract: date
+# BannedUsers: telegram_id, name, username
+# InQueue: telegram_id, name, username
+# Contract: model_id, date,
 # Vacancies(Options)
 # Docs: model_id, expired<bool>
 

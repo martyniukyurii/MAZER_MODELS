@@ -1,4 +1,6 @@
 import json
+import os
+
 from dotenv import load_dotenv
 import urllib.parse
 
@@ -7,16 +9,14 @@ load_dotenv()
 
 #DATABASE CONGIG
 
+DB_NAME = os.getenv("DB_NAME")
 
-IP = "129.151.207.119"
-PORT = "27017"
-LOGIN = "AdminMASI"
-PASSWORD = "admin1488@@@@@"
+IP = os.getenv("IP")
+PORT = os.getenv("PORT")
+LOGIN = os.getenv("LOGIN")
+PASSWORD = os.getenv("PASSWORD")
 
-DB_NAME = "MAZER_MODELS"
-
-############
-BOT_TOKEN = "6881151423:AAE5t3W3JgowNtzJQ67H_mVXlTshHvAaS1o"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 with open("handlers/users/files/lang.json") as f:
     lang: dict = json.load(f)
