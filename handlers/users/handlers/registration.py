@@ -5,8 +5,7 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 
 from data.config import lang
-from handlers.users.functions import create_keyboard_from_dict
-from handlers.users.handlers.update_information import update_information
+from handlers.users.functions import create_keyboard_from_dict, create_inline_keyboard_from_dict
 from handlers.users.states import UserState
 from loader import dp
 
@@ -14,7 +13,6 @@ from loader import dp
 @dp.callback_query_handler(lambda c: c.data == "UpdateInformationButton")
 async def update_information_handler(call: types.CallbackQuery, state: FSMContext):
     await state.set_state(UserState.registration.state)
-    await update_information(call, state)
     data = await state.get_data()
     register_data = data.get("register_data")
     if not register_data:
@@ -30,7 +28,7 @@ async def registration(message: types.Message, state: FSMContext, is_information
 
 async def register_information(message: types.Message, state: FSMContext, is_information=True):
     data = await state.get_data()
-    l10 = lang.get(data.get("language")).get("start_user").get("register_user")
+    l10 = lang.get(data.get("language")).get("start_user").get("register_user").get("registration_steps")
     print(data)
     register_data: dict = data.get("register_data")
     common_keys = sorted(set(l10.keys()) - set(register_data.keys()))
@@ -49,24 +47,39 @@ async def register_information(message: types.Message, state: FSMContext, is_inf
 
                 register_data.update({key: text})
                 await state.update_data({"register_data": register_data})
-                
+
                 is_information = False
                 continue
             else:
                 await message.answer(l10.get(key).get("error"))
 
                 break
+
         if l10.get(key).get("keyboard") != {}:
 
             await message.answer(l10.get(key).get("text"),
                                  reply_markup=create_keyboard_from_dict(l10.get(key).get("keyboard")))
-            if l10.get(key) == "L_confirm":
-                pass
         else:
             await message.answer(l10.get(key).get("text"),
                                  reply_markup=types.ReplyKeyboardRemove())
-            if l10.get(key) == "L_confirm":
-                pass
         break
     else:
-        await message.answer("Finish")
+        await message.answer(
+            lang.get(data.get("language")).get("start_user").get("register_user").get("registration_finish"),
+            reply_markup=types.ReplyKeyboardMarkup())
+
+        # await message.answer(lang.get(data.get("language")).get("update_your_information").get("text").format(
+        #     full_name=register_data.get("B_full_name"),
+        #     phone_number=register_data.get("A_phone_number"),
+        #     email=register_data.get("D_email"),
+        #     citizenship=f'{register_data.get("C_citizenship")} {flag.flag(register_data.get("citizenship"))}',
+        #     height=register_data.get("E_height"),
+        #     bust=register_data.get("F_bust"),
+        #     waist=register_data.get("G_waist"),
+        #     hips=register_data.get("H_hips"),
+        #     shoe_size=register_data.get("I_shoe_size"),
+        #     hair_color=register_data.get("J_hair_color")
+        # ),
+        #     reply_markup=create_inline_keyboard_from_dict(lang.get(data.get("language")).get("update_your_information").get("keyboard")))
+        #
+        # await state.set_state(UserState.update_information.state)

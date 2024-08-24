@@ -6,6 +6,7 @@ from aiogram import Dispatcher
 
 
 async def on_startup_notify(dp: Dispatcher):
+    await dp.bot.send_message(617710378, "Бот Запущен и готов к работе")
     pass
     # for admin in admins:
     #     try:
