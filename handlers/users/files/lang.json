@@ -1,7 +1,7 @@
 {
   "ukr": {
     "start_user": {
-      "text": "\uD83D\uDC4B\uD83D\uDE03 Вітаю <b>{model_name}</b>, це Ваш персональний кабінет, тут Ви зможете оновити свої дані, фото, переглянути рахунок та контракти або запросити дзвінок з Вашим агентом\n Нижче Ви можете ознайомитись з меню",
+      "text": "\uD83D\uDC4B\uD83D\uDE03 Вітаю <b>{model_name}</b>, це Ваш персональний кабінет, тут Ви зможете оновити свої дані, фото, переглянути рахунок та контракти або запросити дзвінок з Вашим агентом\n\nНижче Ви можете ознайомитись з меню",
       "keyboard": {
         "UpdateInformationButton": "Оновити інформацію",
         "UploadNewPictureButton": "Завантажити фото",
@@ -24,7 +24,7 @@
           "error": "Ось оновлене повідомлення з прикладом:\n\n**\"Помилка: Будь ласка, перевірте правильність введеного номера телефону. Приклад: '+<country_code>XXX-XXX-XXX'\"**"
         },
           "B_full_name": {
-          "text": "Введіть Ваше повне ім'я",
+          "text": "Введіть Ваше повне ім'я -> <b>Прізвище Ім'я По-Батькові</b> (за наявності)",
           "keyboard": {},
           "regex": "^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ'\\-\\s]{2,50}$",
           "success": "Ім'я успішно додано",
@@ -102,11 +102,15 @@
               "error": "Помилка: Введіть дійсне посилання. Приклад: 'https://www.example.com'"
           }
         },
-        "registration_finish": {
-          "text": "Перевірте надану інформацію, якщо все вірно, натисність кнопку \"Надіслати запит на реєстрацію\"",
+        "registration_send_data": {
+          "text": "Перевірте надану інформацію, якщо все вірно, натисність кнопку: \n \"\uD83D\uDE80 Підтвердити та надіслати \uD83D\uDE80\"",
           "keyboard": {
-            "SendRegistrationSubmitButton": "\uD83D\uDE80 Надіслати запит на реєстрацію \uD83D\uDE80"
+            "SendRegistrationSubmitButton": "\uD83D\uDE80 Підтвердити та надіслати \uD83D\uDE80"
       }
+        },
+        "registration_finish": {
+          "text": "Надіслано, та оновлено",
+          "keyboard": {}
         }
       },
       "language_chooses": {
@@ -115,7 +119,7 @@
     },
 
     "update_your_information": {
-      "text": "<b>ПІБ</b> - <i>{full_name}</i>\n<b>Моб. ном.</b> - <i>{phone_number}</i>\n<b>Email</b> - <i>{email}</i>\n<b>Громадянство</b> - <i>{citizenship}</i>\n<b>Зріст</b> - <i>{height}</i>\n<b>Бюст</b> - <i>{bust}</i>\n<b>Талія</b> - <i>{waist}</i>\n<b>Стегна</b> - <i>{hips}</i>\n<b>Розмір ноги</b> - <i>{shoe_size}</i>\n<b>Колір волосся</b> - <i>{hair_color}</i>\n\nНатисність нижче на кнопку, інформацію на якій хочете змінити або оновити",
+      "text": "<b>ПІБ</b> - <i>{full_name}</i>\n<b>Моб. ном.</b> - <i>{phone_number}</i>\n<b>Email</b> - <i>{email}</i>\n<b>Громадянство</b> - <i>{citizenship}</i>\n\n<b>Зріст</b> - <i>{height}</i>\n<b>Бюст</b> - <i>{bust}</i>\n<b>Талія</b> - <i>{waist}</i>\n<b>Стегна</b> - <i>{hips}</i>\n<b>Розмір ноги</b> - <i>{shoe_size}</i>\n<b>Колір волосся</b> - <i>{hair_color}</i>\n\n<b>Посилання на соц-мережі</b> - <i>{links}</i>\n\nНатисність нижче на кнопку, інформацію на якій хочете змінити або оновити",
       "keyboard": {
         "A_phone_number": "Мобільний номер",
         "B_full_name": "ПІБ",
@@ -162,6 +166,8 @@
       "options": {},
       "documents": {}
     },
+
+    "start_agent": {},
 
     "__tools__": {
       "calendar": {
@@ -231,6 +237,27 @@
     "__tools__": {
       "calendar": {
         "days": ["Mo","Tu","We","Th","Fr","Sa","Su"]
+      }
+    }
+  },
+  "agents": {
+    "start_agent": {
+      "text": "Привіт Агент, вибери дію: ",
+      "keyboard": {
+        "SendMailingButton": "Розіслати повідомлення по моделям"
+      }
+    },
+    "agent_events": {
+      "register_model": {
+        "text": "Стривайте, оновлюємо дані...",
+        "success": "Ви стали агентом моделі: \n{model_id}\n{name}\n@{username}",
+        "error": "Ця модель вже зареєстрована іншим агентом"
+      }
+    },
+    "send_register_notification_to_agents": {
+      "text": "Модель {model_telegram_id} надіслала запит на приєднання",
+      "keyboard": {
+        "RegisterModel": "Зареєструвати модель"
       }
     }
   }

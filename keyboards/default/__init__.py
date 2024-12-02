@@ -1,1 +1,1 @@
-from .menu import menu
+from .keyboard import create_keyboard_from_dict

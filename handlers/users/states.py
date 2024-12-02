@@ -10,3 +10,8 @@ class UserState(StatesGroup):
     download_guides = State()
     set_up_the_call = State()
     ### TODO
+
+
+class AgentState(StatesGroup):
+    start = State()
+    send_mailing = State()
