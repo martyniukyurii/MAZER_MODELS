@@ -18,7 +18,7 @@ PASSWORD = os.getenv("PASSWORD")
 
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-with open("handlers/users/files/lang.json") as f:
+with open("handlers/users/files/lang.json", encoding='utf-8') as f:
     lang: dict = json.load(f)
 
 

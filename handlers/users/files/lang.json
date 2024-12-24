@@ -15,98 +15,98 @@
       "register_user": {
         "registration_steps": {
           "A_phone_number": {
-          "text": "Введіть Ваш номер телефону",
-          "keyboard": {
-            "SendPhoneNumberButton": "Поділитися моїм номером"
+            "text": "Введіть Ваш номер телефону",
+            "keyboard": {
+              "SendPhoneNumberButton": "Поділитися моїм номером"
+            },
+            "regex": "^\\+?[1-9]\\d{1,14}$",
+            "success": "Номер телефону успішно додано",
+            "error": "Ось оновлене повідомлення з прикладом:\n\n**\"Помилка: Будь ласка, перевірте правильність введеного номера телефону. Приклад: '+<country_code>XXX-XXX-XXX'\"**"
           },
-          "regex": "^\\+?[1-9]\\d{1,14}$",
-          "success": "Номер телефону успішно додано",
-          "error": "Ось оновлене повідомлення з прикладом:\n\n**\"Помилка: Будь ласка, перевірте правильність введеного номера телефону. Приклад: '+<country_code>XXX-XXX-XXX'\"**"
-        },
           "B_full_name": {
-          "text": "Введіть Ваше повне ім'я -> <b>Прізвище Ім'я По-Батькові</b> (за наявності)",
-          "keyboard": {},
-          "regex": "^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ'\\-\\s]{2,50}$",
-          "success": "Ім'я успішно додано",
-          "error": "Помилка: Ім'я має містити лише літери, апострофи, дефіси та пробіли. Приклад: 'Іван О'Генрі'"
+            "text": "Введіть Ваше повне ім'я -> <b>Прізвище Ім'я По-Батькові</b> (за наявності)",
+            "keyboard": {},
+            "regex": "^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ'\\-\\s]{2,50}$",
+            "success": "Ім'я успішно додано",
+            "error": "Помилка: ПІБ має містити лише літери, апострофи, дефіси та пробіли. Приклад: 'Іван О'Генрі'"
           },
           "C_citizenship": {
-              "text": "Введіть Ваше громадянство, надішліть прапор Вашої країни емоджі смайликом, наприклад якщо Ваша країна Сполучені Штати Америки, надішліть \uD83C\uDDFA\uD83C\uDDF8",
-              "keyboard": {},
-              "regex": ":(AC|AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|BA|BB|BD|BE|BF|BG|BH|BI|BJ|BL|BM|BN|BO|BQ|BR|BS|BT|BV|BW|BY|BZ|CA|CC|CD|CF|CG|CH|CI|CK|CL|CM|CN|CO|CP|CR|CU|CV|CW|CX|CY|CZ|DE|DG|DJ|DK|DM|DO|DZ|EA|EC|EE|EG|EH|ER|ES|ET|EU|FI|FJ|FK|FM|FO|FR|GA|GB|GD|GE|GF|GG|GH|GI|GL|GM|GN|GP|GQ|GR|GS|GT|GU|GW|GY|HK|HM|HN|HR|HT|HU|IC|ID|IE|IL|IM|IN|IO|IQ|IR|IS|IT|JE|JM|JO|JP|KE|KG|KH|KI|KM|KN|KP|KR|KW|KY|KZ|LA|LB|LC|LI|LK|LR|LS|LT|LU|LV|LY|MA|MC|MD|ME|MF|MG|MH|MK|ML|MM|MN|MO|MP|MQ|MR|MS|MT|MU|MV|MW|MX|MY|MZ|NA|NC|NE|NF|NG|NI|NL|NO|NP|NR|NU|NZ|OM|PA|PE|PF|PG|PH|PK|PL|PM|PN|PR|PS|PT|PW|PY|QA|RE|RO|RS|RU|RW|SA|SB|SC|SD|SE|SG|SH|SI|SJ|SK|SL|SM|SN|SO|SR|SS|ST|SV|SX|SY|SZ|TA|TC|TD|TF|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TT|TV|TW|TZ|UA|UG|UM|US|UY|UZ|VA|VC|VE|VG|VI|VN|VU|WF|WS|XK|YE|YT|ZA|ZM|ZW):",
-              "success": "Громадянство успішно додано",
-              "error": "Помилка: Громадянство має містити лише емоджі прапора. Приклад: '\uD83C\uDDFA\uD83C\uDDF8'"
+            "text": "Введіть Ваше громадянство, надішліть прапор Вашої країни емоджі смайликом, наприклад якщо Ваша країна Сполучені Штати Америки, надішліть \uD83C\uDDFA\uD83C\uDDF8",
+            "keyboard": {},
+            "regex": ":(AC|AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|BA|BB|BD|BE|BF|BG|BH|BI|BJ|BL|BM|BN|BO|BQ|BR|BS|BT|BV|BW|BY|BZ|CA|CC|CD|CF|CG|CH|CI|CK|CL|CM|CN|CO|CP|CR|CU|CV|CW|CX|CY|CZ|DE|DG|DJ|DK|DM|DO|DZ|EA|EC|EE|EG|EH|ER|ES|ET|EU|FI|FJ|FK|FM|FO|FR|GA|GB|GD|GE|GF|GG|GH|GI|GL|GM|GN|GP|GQ|GR|GS|GT|GU|GW|GY|HK|HM|HN|HR|HT|HU|IC|ID|IE|IL|IM|IN|IO|IQ|IR|IS|IT|JE|JM|JO|JP|KE|KG|KH|KI|KM|KN|KP|KR|KW|KY|KZ|LA|LB|LC|LI|LK|LR|LS|LT|LU|LV|LY|MA|MC|MD|ME|MF|MG|MH|MK|ML|MM|MN|MO|MP|MQ|MR|MS|MT|MU|MV|MW|MX|MY|MZ|NA|NC|NE|NF|NG|NI|NL|NO|NP|NR|NU|NZ|OM|PA|PE|PF|PG|PH|PK|PL|PM|PN|PR|PS|PT|PW|PY|QA|RE|RO|RS|RU|RW|SA|SB|SC|SD|SE|SG|SH|SI|SJ|SK|SL|SM|SN|SO|SR|SS|ST|SV|SX|SY|SZ|TA|TC|TD|TF|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TT|TV|TW|TZ|UA|UG|UM|US|UY|UZ|VA|VC|VE|VG|VI|VN|VU|WF|WS|XK|YE|YT|ZA|ZM|ZW):",
+            "success": "Громадянство успішно додано",
+            "error": "Помилка: Громадянство має містити лише емоджі прапора. Приклад: '\uD83C\uDDFA\uD83C\uDDF8'"
           },
           "D_email": {
-              "text": "Введіть Вашу електронну адресу",
-              "keyboard": {},
-              "regex": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
-              "success": "Електронна адреса успішно додана",
-              "error": "Помилка: Введіть дійсну електронну адресу. Приклад: 'example@domain.com'"
+            "text": "Введіть Вашу електронну адресу",
+            "keyboard": {},
+            "regex": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+            "success": "Електронна адреса успішно додана",
+            "error": "Помилка: Введіть дійсну електронну адресу. Приклад: 'example@domain.com'"
           },
           "E_height": {
-              "text": "Введіть Ваш зріст (см)",
-              "keyboard": {},
-              "regex": "^\\d{2,3}$",
-              "success": "Зріст успішно додано",
-              "error": "Помилка: Зріст має бути числом від 10 до 999 см. Приклад: '180'"
+            "text": "Введіть Ваш зріст (см)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Зріст успішно додано",
+            "error": "Помилка: Зріст має бути числом від 10 до 999 см. Приклад: '180'"
           },
           "F_bust": {
-              "text": "Введіть Ваш об'єм грудей (см)",
-              "keyboard": {},
-              "regex": "^\\d{2,3}$",
-              "success": "Об'єм грудей успішно додано",
-              "error": "Помилка: Об'єм грудей має бути числом від 10 до 999 см. Приклад: '90'"
+            "text": "Введіть Ваш об'єм грудей (см)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Об'єм грудей успішно додано",
+            "error": "Помилка: Об'єм грудей має бути числом від 10 до 999 см. Приклад: '90'"
           },
           "G_waist": {
-              "text": "Введіть Ваш об'єм талії (см)",
-              "keyboard": {},
-              "regex": "^\\d{2,3}$",
-              "success": "Об'єм талії успішно додано",
-              "error": "Помилка: Об'єм талії має бути числом від 10 до 999 см. Приклад: '70'"
+            "text": "Введіть Ваш об'єм талії (см)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Об'єм талії успішно додано",
+            "error": "Помилка: Об'єм талії має бути числом від 10 до 999 см. Приклад: '70'"
           },
           "H_hips": {
-              "text": "Введіть Ваш об'єм стегон (см)",
-              "keyboard": {},
-              "regex": "^\\d{2,3}$",
-              "success": "Об'єм стегон успішно додано",
-              "error": "Помилка: Об'єм стегон має бути числом від 10 до 999 см. Приклад: '95'"
+            "text": "Введіть Ваш об'єм стегон (см)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Об'єм стегон успішно додано",
+            "error": "Помилка: Об'єм стегон має бути числом від 10 до 999 см. Приклад: '95'"
           },
           "I_shoe_size": {
-              "text": "Введіть Ваш розмір взуття",
-              "keyboard": {},
-              "regex": "^\\d{1,2}(\\.\\d)?$",
-              "success": "Розмір взуття успішно додано",
-              "error": "Помилка: Розмір взуття має бути числом від 1 до 99 з можливим десятковим значенням. Приклад: '42.5'"
+            "text": "Введіть Ваш розмір взуття",
+            "keyboard": {},
+            "regex": "^\\d{1,2}(\\.\\d)?$",
+            "success": "Розмір взуття успішно додано",
+            "error": "Помилка: Розмір взуття має бути числом від 1 до 99 з можливим десятковим значенням. Приклад: '42.5'"
           },
           "J_hair_color": {
-              "text": "Виберіть колір Вашого волосся з поданого нижче списку",
-              "keyboard": {
-                        "SendBlondHairButton": "Блонд (світле волосся)",
-                        "SendLightBrownHairButton": "Русявий (світло-коричневе волосся)",
-                        "SendBrownHairButton": "Каштановий (середньо-коричневе волосся)",
-                        "SendDarkBrownHairButton": "Темно-каштановий (темно-коричневе волосся)",
-                        "SendBlackHairButton": "Чорний (дуже темне волосся)",
-                        "SendRedHairButton": "Рудий (рудий або мідний відтінок)",
-                        "SendOtherHairButton": "Інший колір волосся, якого немає в списку"
-              },
-              "regex": "Блонд \\(світле волосся\\)|Русявий \\(світло-коричневе волосся\\)|Каштановий \\(середньо-коричневе волосся\\)|Темно-каштановий \\(темно-коричневе волосся\\)|Чорний \\(дуже темне волосся\\)|Рудий \\(рудий або мідний відтінок\\)|Інший колір волосся, якого немає в списку",
-              "success": "Колір волосся успішно додано",
-              "error": "Помилка: Виберіть колір з наведеного списку. Приклад: 'Темно-русявий'"
+            "text": "Виберіть колір Вашого волосся з поданого нижче списку",
+            "keyboard": {
+              "SendBlondHairButton": "Блонд (світле волосся)",
+              "SendLightBrownHairButton": "Русявий (світло-коричневе волосся)",
+              "SendBrownHairButton": "Каштановий (середньо-коричневе волосся)",
+              "SendDarkBrownHairButton": "Темно-каштановий (темно-коричневе волосся)",
+              "SendBlackHairButton": "Чорний (дуже темне волосся)",
+              "SendRedHairButton": "Рудий (рудий або мідний відтінок)",
+              "SendOtherHairButton": "Інший колір волосся, якого немає в списку"
+            },
+            "regex": "Блонд \\(світле волосся\\)|Русявий \\(світло-коричневе волосся\\)|Каштановий \\(середньо-коричневе волосся\\)|Темно-каштановий \\(темно-коричневе волосся\\)|Чорний \\(дуже темне волосся\\)|Рудий \\(рудий або мідний відтінок\\)|Інший колір волосся, якого немає в списку",
+            "success": "Колір волосся успішно додано",
+            "error": "Помилка: Виберіть колір з наведеного списку. Приклад: 'Темно-русявий'"
           },
           "K_links": {
-              "text": "Введіть посилання на Ваші профілі або портфоліо",
-              "keyboard": {},
-              "regex": "",
-              "success": "Посилання успішно додано",
-              "error": "Помилка: Введіть дійсне посилання. Приклад: 'https://www.example.com'"
+            "text": "Введіть посилання на Ваші профілі або портфоліо",
+            "keyboard": {},
+            "regex": "",
+            "success": "Посилання успішно додано",
+            "error": "Помилка: Введіть дійсне посилання. Приклад: 'https://www.example.com'"
           }
         },
         "registration_send_data": {
           "text": "Перевірте надану інформацію, якщо все вірно, натисність кнопку: \n \"\uD83D\uDE80 Підтвердити та надіслати \uD83D\uDE80\"",
           "keyboard": {
             "SendRegistrationSubmitButton": "\uD83D\uDE80 Підтвердити та надіслати \uD83D\uDE80"
-      }
+          }
         },
         "registration_finish": {
           "text": "Надіслано, та оновлено",
@@ -119,7 +119,7 @@
     },
 
     "update_your_information": {
-      "text": "<b>ПІБ</b> - <i>{full_name}</i>\n<b>Моб. ном.</b> - <i>{phone_number}</i>\n<b>Email</b> - <i>{email}</i>\n<b>Громадянство</b> - <i>{citizenship}</i>\n\n<b>Зріст</b> - <i>{height}</i>\n<b>Бюст</b> - <i>{bust}</i>\n<b>Талія</b> - <i>{waist}</i>\n<b>Стегна</b> - <i>{hips}</i>\n<b>Розмір ноги</b> - <i>{shoe_size}</i>\n<b>Колір волосся</b> - <i>{hair_color}</i>\n\n<b>Посилання на соц-мережі</b> - <i>{links}</i>\n\nНатисність нижче на кнопку, інформацію на якій хочете змінити або оновити",
+      "text": "<b>ПІБ</b> - <i>{full_name}</i>\n<b>Моб. ном.</b> - <i>{phone_number}</i>\n<b>Email</b> - <i>{email}</i>\n<b>Громадянство</b> - <i>{citizenship}</i>\n\n<b>Зріст</b> - <i>{height}</i>\n<b>Бюст</b> - <i>{bust}</i>\n<b>Талія</b> - <i>{waist}</i>\n<b>Стегна</b> - <i>{hips}</i>\n<b>Розмір взуття</b> - <i>{shoe_size}</i>\n<b>Колір волосся</b> - <i>{hair_color}</i>\n\n<b>Посилання на соц-мережі</b> - <i>{links}</i>\n\nНатисність нижче на кнопку, інформацію на якій хочете змінити або оновити",
       "keyboard": {
         "A_phone_number": "Мобільний номер",
         "B_full_name": "ПІБ",
@@ -129,30 +129,70 @@
         "F_bust": "Бюст",
         "G_waist": "Талія",
         "H_hips": "Стегна",
-        "I_shoe_size": "Розмір ноги",
+        "I_shoe_size": "Розмір взуття",
         "J_hair_color": "Колір волосся",
         "K_links": "Посилання"
       }
     },
-    "update_new_picture": {
-      "text": "",
-      "keyboard": {
-
+    "upload_new_picture": {
+      "uploading_steps": {
+        "L_name": {
+          "text": "Введіть назву фотосесії",
+          "keyboard": {},
+          "regex": "^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ'\\-\\s]{2,50}$",
+          "success": "Назву фотосесії успішно додано",
+          "error": "Помилка: Назва фотосесії повинна містити лише літери, апострофи, дефіси та пробіли."
+        },
+        "M_date": {
+          "text": "Введіть дату фотосесії",
+          "keyboard": {},
+          "regex": "^\\d{2}\\.\\d{2}\\.\\d{4}$",
+          "success": "Дату успішно додано",
+          "error": "Помилка: Введіть дату у форматі 'DD.MM.YYYY'. Приклад: '23.11.2024'"
+        },
+        "N_country_of_shooting": {
+          "text": "Введіть країну де була проведена фотосесія, надішліть прапор країни з емодзі, наприклад, якщо країна - Сполучені Штати Америки, надішліть \uD83C\uDDFA\uD83C\uDDF8",
+          "keyboard": {},
+          "regex": ":(AC|AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|BA|BB|BD|BE|BF|BG|BH|BI|BJ|BL|BM|BN|BO|BQ|BR|BS|BT|BV|BW|BY|BZ|CA|CC|CD|CF|CG|CH|CI|CK|CL|CM|CN|CO|CP|CR|CU|CV|CW|CX|CY|CZ|DE|DG|DJ|DK|DM|DO|DZ|EA|EC|EE|EG|EH|ER|ES|ET|EU|FI|FJ|FK|FM|FO|FR|GA|GB|GD|GE|GF|GG|GH|GI|GL|GM|GN|GP|GQ|GR|GS|GT|GU|GW|GY|HK|HM|HN|HR|HT|HU|IC|ID|IE|IL|IM|IN|IO|IQ|IR|IS|IT|JE|JM|JO|JP|KE|KG|KH|KI|KM|KN|KP|KR|KW|KY|KZ|LA|LB|LC|LI|LK|LR|LS|LT|LU|LV|LY|MA|MC|MD|ME|MF|MG|MH|MK|ML|MM|MN|MO|MP|MQ|MR|MS|MT|MU|MV|MW|MX|MY|MZ|NA|NC|NE|NF|NG|NI|NL|NO|NP|NR|NU|NZ|OM|PA|PE|PF|PG|PH|PK|PL|PM|PN|PR|PS|PT|PW|PY|QA|RE|RO|RS|RU|RW|SA|SB|SC|SD|SE|SG|SH|SI|SJ|SK|SL|SM|SN|SO|SR|SS|ST|SV|SX|SY|SZ|TA|TC|TD|TF|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TT|TV|TW|TZ|UA|UG|UM|US|UY|UZ|VA|VC|VE|VG|VI|VN|VU|WF|WS|XK|YE|YT|ZA|ZM|ZW):",
+          "success": "Країну успішно додано",
+          "error": "Помилка: Країна повинна містити лише емоджі прапора. Приклад: '\uD83C\uDDFA\uD83C\uDDF8'"
+        },
+        "O_team": {
+          "text": "Введіть команду, яка проводила фотосесію",
+          "keyboard": {},
+          "regex": "",
+          "success": "Команду успішно додано",
+          "error": "Помилка: Команда повинна містити лише літери, апострофи, дефіси та пробіли. Приклад: 'Fashion House'"
+        },
+        "P_links": {
+          "text": "Вкажіть посилання на інстаграм або сайт команди",
+          "keyboard": {},
+          "regex": "",
+          "success": "Посилання успішно додано",
+          "error": "Помилка: Введіть дійсне посилання. Приклад: 'https://www.instagram.com/'"
+        },
+        "Q_pictures": {
+          "text": "Завантажте фотографії",
+          "keyboard": {},
+          "regex": "",
+          "success": "Фотографії успішно додано",
+          "error": "Помилка: Завантажте принаймні одне зображення"
+        }
       }
     },
     "download_our_guides": {
-      "text": "",
-      "keyboard": {
-
-      }
+      "text": "Ось посібники, які ви запросили",
+      "keyboard": {},
+      "error": "Помилка: Посібників не знайдено"
     },
     "set_up_the_call": {
-      "text": "",
+      "text": "Оберіть з ким ви хочете запланувати дзвінок",
       "keyboard": {
-
-      }
+        "AgentButton": "З агентом",
+        "OwnerButton": "З власником"
+      },
+      "success": "Ваш запит відправлено"
     },
-
     "check_your_status": {
       "text": "",
       "keyboard": {
@@ -171,62 +211,211 @@
 
     "__tools__": {
       "calendar": {
-        "days": ["Mo","Tu","We","Th","Fr","Sa","Su"]
+        "days": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
       }
     }
   },
   "eng": {
     "start_user": {
-      "text": "Start",
+      "text": "\uD83D\uDC4B\uD83D\uDE03 Welcome <b>{model_name}</b>, this is Your personal account, here You can update Your data, photo, view the account and contracts or request a call with Your agent\n\nYou can see the menu below",
       "keyboard": {
-        "UpdateInformationButton": "Update Information Keyboard",
-        "UploadNewPictureButton": "Upload New Picture Keyboard",
-        "DownloadGuidesButton": "Download Guides Keyboard",
-        "SetUpTheCallButton": "set up the call",
+        "UpdateInformationButton": "Update information",
+        "UploadNewPictureButton": "Upload pictures",
+        "DownloadGuidesButton": "Download guides",
+        "SetUpTheCallButton": "Set up the call",
         "CheckYourStatusButton": "Check status"
       },
       "banned_user": {
-        "text": "text"
+        "text": "You are blocked from accessing the bot"
       },
       "register_user": {
-        "text": ""
+        "registration_steps": {
+          "A_phone_number": {
+            "text": "Enter Your phone number",
+            "keyboard": {
+              "SendPhoneNumberButton": "Share my number"
+            },
+            "regex": "^\\+?[1-9]\\d{1,14}$",
+            "success": "Phone number added successfully",
+            "error": "Here is an updated message with an example:\n\n**\"Error: Please check that the phone number You entered is correct. Example: '+<country_code>XXX-XXX-XXX'\"**"
+          },
+          "B_full_name": {
+            "text": "Enter Your full name -> <b>First name Last name</b>",
+            "keyboard": {},
+            "regex": "^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ'\\-\\s]{2,50}$",
+            "success": "Name added successfully",
+            "error": "Error: The name must contain only letters, apostrophes, hyphens, and spaces. Example: 'John O'Henry'"
+          },
+          "C_citizenship": {
+            "text": "Enter Your nationality, send the flag of Your country with an emoji, for example, if Your country is the United States of America, send \uD83C\uDDFA\uD83C\uDDF8",
+            "keyboard": {},
+            "regex": ":(AC|AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|BA|BB|BD|BE|BF|BG|BH|BI|BJ|BL|BM|BN|BO|BQ|BR|BS|BT|BV|BW|BY|BZ|CA|CC|CD|CF|CG|CH|CI|CK|CL|CM|CN|CO|CP|CR|CU|CV|CW|CX|CY|CZ|DE|DG|DJ|DK|DM|DO|DZ|EA|EC|EE|EG|EH|ER|ES|ET|EU|FI|FJ|FK|FM|FO|FR|GA|GB|GD|GE|GF|GG|GH|GI|GL|GM|GN|GP|GQ|GR|GS|GT|GU|GW|GY|HK|HM|HN|HR|HT|HU|IC|ID|IE|IL|IM|IN|IO|IQ|IR|IS|IT|JE|JM|JO|JP|KE|KG|KH|KI|KM|KN|KP|KR|KW|KY|KZ|LA|LB|LC|LI|LK|LR|LS|LT|LU|LV|LY|MA|MC|MD|ME|MF|MG|MH|MK|ML|MM|MN|MO|MP|MQ|MR|MS|MT|MU|MV|MW|MX|MY|MZ|NA|NC|NE|NF|NG|NI|NL|NO|NP|NR|NU|NZ|OM|PA|PE|PF|PG|PH|PK|PL|PM|PN|PR|PS|PT|PW|PY|QA|RE|RO|RS|RU|RW|SA|SB|SC|SD|SE|SG|SH|SI|SJ|SK|SL|SM|SN|SO|SR|SS|ST|SV|SX|SY|SZ|TA|TC|TD|TF|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TT|TV|TW|TZ|UA|UG|UM|US|UY|UZ|VA|VC|VE|VG|VI|VN|VU|WF|WS|XK|YE|YT|ZA|ZM|ZW):",
+            "success": "Citizenship successfully added",
+            "error": "Error: Citizenship should only contain a flag emoji. Example: '\uD83C\uDDFA\uD83C\uDDF8'"
+          },
+          "D_email": {
+            "text": "Enter Your email address",
+            "keyboard": {},
+            "regex": "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+            "success": "Email address successfully added",
+            "error": "Error: Please enter a valid email address. Example: 'example@domain.com'"
+          },
+          "E_height": {
+            "text": "Enter Your height (cm)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Height successfully added",
+            "error": "Error: Height must be a number between 10 and 999 cm. Example: '180'"
+          },
+          "F_bust": {
+            "text": "Enter Your bust measurement (cm)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Bust measurement successfully added",
+            "error": "Error: Bust measurement must be a number between 10 and 999 cm. Example: '90'"
+          },
+          "G_waist": {
+            "text": "Enter Your waist measurement (cm)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Waist measurement successfully added",
+            "error": "Error: Waist measurement must be a number between 10 and 999 cm. Example: '70'"
+          },
+          "H_hips": {
+            "text": "Enter Your hip measurement (cm)",
+            "keyboard": {},
+            "regex": "^\\d{2,3}$",
+            "success": "Hip measurement successfully added",
+            "error": "Error: Hip measurement must be a number between 10 and 999 cm. Example: '95'"
+          },
+          "I_shoe_size": {
+            "text": "Enter Your shoe size",
+            "keyboard": {},
+            "regex": "^\\d{1,2}(\\.\\d)?$",
+            "success": "Shoe size successfully added",
+            "error": "Error: The shoe size must be a number between 1 and 99 with a possible decimal value. Example: '42.5'"
+          },
+          "J_hair_color": {
+            "text": "Choose Your hair color from the list below",
+            "keyboard": {
+              "SendBlondHairButton": "Blond (light hair)",
+              "SendLightBrownHairButton": "Light brown (light brown hair)",
+              "SendBrownHairButton": "Chestnut (medium brown hair)",
+              "SendDarkBrownHairButton": "Dark chestnut (dark brown hair)",
+              "SendBlackHairButton": "Black (very dark hair)",
+              "SendRedHairButton": "Red (red or copper shade)",
+              "SendOtherHairButton": "Other hair color not listed"
+            },
+            "regex": "Blond \\(light hair\\)|Light brown \\(light brown hair\\)|Chestnut \\(medium brown hair\\)|Dark chestnut \\(dark brown hair\\)|Black \\(very dark hair\\)|Red \\(red or copper shade\\)|Other hair color not listed",
+            "success": "Hair color successfully added",
+            "error": "Error: Select a color from the list below. Example: 'Light brown (light brown hair)'."
+          },
+          "K_links": {
+            "text": "Enter links to Your profiles or portfolios",
+            "keyboard": {},
+            "regex": "",
+            "success": "Link successfully added",
+            "error": "Error: Enter a valid link. Example: 'https://www.example.com'"
+          }
+        },
+        "registration_send_data": {
+          "text": "Check the information provided, if everything is correct, click the button: \n \"\uD83D\uDE80 Confirm and submit \uD83D\uDE80\"",
+          "keyboard": {
+            "SendRegistrationSubmitButton": "\uD83D\uDE80 Confirm and submit \uD83D\uDE80"
+          }
+        },
+        "registration_finish": {
+          "text": "Submitted and updated",
+          "keyboard": {}
+        }
       },
       "language_chooses": {
-        "text": "Language Chooses as {lang}"
+        "text": "Language changed to {lang}"
       }
     },
 
     "update_your_information": {
-      "text": "",
+      "text": "<b>Full name</b> - <i>{full_name}</i>\n<b>Phone number</b> - <i>{phone_number}</i>\n<b>Email</b> - <i>{email}</i>\n<b>Citizenship</b> - <i>{citizenship}</i>\n\n<b>Height</b> - <i>{height}</i>\n<b>Bust</b> - <i>{bust}</i>\n<b>Waist</b> - <i>{waist}</i>\n<b>Hips</b> - <i>{hips}</i>\n<b>Shoe size</b> - <i>{shoe_size}</i>\n<b>Hair color</b> - <i>{hair_color}</i>\n\n<b>Links to social networks</b> - <i>{links}</i>\n\nClick on the button below, the information on which you want to change or update",
       "keyboard": {
+        "A_phone_number": "Phone number",
+        "B_full_name": "Full name",
+        "C_citizenship": "Citizenship",
+        "D_email": "Email",
+        "E_height": "Height",
+        "F_bust": "Bust",
+        "G_waist": "Waist",
+        "H_hips": "Hips",
+        "I_shoe_size": "Shoe size",
+        "J_hair_color": "Hair color",
+        "K_links": "Links"
       }
     },
-    "update_new_picture": {
-      "text": "",
-      "keyboard": {
-
+    "upload_new_picture": {
+      "uploading_steps": {
+        "L_name": {
+          "text": "Enter the name",
+          "keyboard": {},
+          "regex": "^[A-Za-zА-Яа-яЁёЇїІіЄєҐґ'\\-\\s]{2,50}$",
+          "success": "Name successfully added",
+          "error": "Error: The name must contain only letters, apostrophes, hyphens, and spaces. Example: 'Portrait'"
+        },
+        "M_date": {
+          "text": "Enter the date of the shooting",
+          "keyboard": {},
+          "regex": "^\\d{2}\\.\\d{2}\\.\\d{4}$",
+          "success": "Date successfully added",
+          "error": "Error: Enter the date in the format 'DD.MM.YYYY'. Example: '01.01.2022'"
+        },
+        "N_country_of_shooting": {
+          "text": "Enter the country of the shooting, send the flag of the country with an emoji, for example, if the country is the United States of America, send \uD83C\uDDFA\uD83C\uDDF8",
+          "keyboard": {},
+          "regex": ":(AC|AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|BA|BB|BD|BE|BF|BG|BH|BI|BJ|BL|BM|BN|BO|BQ|BR|BS|BT|BV|BW|BY|BZ|CA|CC|CD|CF|CG|CH|CI|CK|CL|CM|CN|CO|CP|CR|CU|CV|CW|CX|CY|CZ|DE|DG|DJ|DK|DM|DO|DZ|EA|EC|EE|EG|EH|ER|ES|ET|EU|FI|FJ|FK|FM|FO|FR|GA|GB|GD|GE|GF|GG|GH|GI|GL|GM|GN|GP|GQ|GR|GS|GT|GU|GW|GY|HK|HM|HN|HR|HT|HU|IC|ID|IE|IL|IM|IN|IO|IQ|IR|IS|IT|JE|JM|JO|JP|KE|KG|KH|KI|KM|KN|KP|KR|KW|KY|KZ|LA|LB|LC|LI|LK|LR|LS|LT|LU|LV|LY|MA|MC|MD|ME|MF|MG|MH|MK|ML|MM|MN|MO|MP|MQ|MR|MS|MT|MU|MV|MW|MX|MY|MZ|NA|NC|NE|NF|NG|NI|NL|NO|NP|NR|NU|NZ|OM|PA|PE|PF|PG|PH|PK|PL|PM|PN|PR|PS|PT|PW|PY|QA|RE|RO|RS|RU|RW|SA|SB|SC|SD|SE|SG|SH|SI|SJ|SK|SL|SM|SN|SO|SR|SS|ST|SV|SX|SY|SZ|TA|TC|TD|TF|TG|TH|TJ|TK|TL|TM|TN|TO|TR|TT|TV|TW|TZ|UA|UG|UM|US|UY|UZ|VA|VC|VE|VG|VI|VN|VU|WF|WS|XK|YE|YT|ZA|ZM|ZW):",
+          "success": "Country of the shooting successfully added",
+          "error": "Error: Country of the shooting should only contain a flag emoji. Example: '\uD83C\uDDFA\uD83C\uDDF8'"
+        },
+        "O_team": {
+          "text": "Enter the team",
+          "keyboard": {},
+          "regex": "",
+          "success": "Team successfully added",
+          "error": "Error: The team must contain only letters, apostrophes, hyphens, and spaces. Example: 'Team A'"
+        },
+        "P_links": {
+          "text": "Enter links to the team's instagram or website",
+          "keyboard": {},
+          "regex": "",
+          "success": "Links successfully added",
+          "error": "Error: Enter a valid link. Example: 'https://www.instagram.com/'"
+        },
+        "Q_pictures": {
+          "text": "Upload pictures",
+          "keyboard": {},
+          "regex": "",
+          "success": "Pictures successfully added",
+          "error": "Error: Upload at least one picture"
+        }
       }
     },
     "download_our_guides": {
-      "text": "",
-      "keyboard": {
-
-      }
+      "text": "Here is the guides you requested",
+      "keyboard": {},
+      "error": "Error: Guides not found"
     },
     "set_up_the_call": {
-      "text": "",
+      "text": "Choose who you want to set up the call with",
       "keyboard": {
-
-      }
+        "AgentButton": "With the agent",
+        "OwnerButton": "With the owner"
+      },
+      "success": "Your request has been sent"
     },
-
     "check_your_status": {
       "text": "",
       "keyboard": {
         "FinanceButton": "Update Information Keyboard",
         "ScheduleButton": "Upload New Picture Keyboard",
         "OptionsButton": "Download Guides Keyboard",
-        "DocumentsButton": "set up the call"
+        "DocumentsButton": "Set up the call"
       },
       "finance": {},
       "schedule": {},
@@ -236,7 +425,7 @@
 
     "__tools__": {
       "calendar": {
-        "days": ["Mo","Tu","We","Th","Fr","Sa","Su"]
+        "days": ["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"]
       }
     }
   },
