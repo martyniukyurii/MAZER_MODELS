@@ -4,7 +4,7 @@
       "text": "\uD83D\uDC4B\uD83D\uDE03 Вітаю <b>{model_name}</b>, це Ваш персональний кабінет, тут Ви зможете оновити свої дані, фото, переглянути рахунок та контракти або запросити дзвінок з Вашим агентом\n\nНижче Ви можете ознайомитись з меню",
       "keyboard": {
         "UpdateInformationButton": "Оновити інформацію",
-        "UploadNewPictureButton": "Завантажити фото",
+        "UploadNewPicturesButton": "Завантажити фото",
         "DownloadGuidesButton": "Завантажити гайди",
         "SetUpTheCallButton": "Запланувати дзвінок",
         "CheckYourStatusButton": "Перевірити статус"
@@ -134,7 +134,7 @@
         "K_links": "Посилання"
       }
     },
-    "upload_new_picture": {
+    "upload_new_pictures": {
       "uploading_steps": {
         "L_name": {
           "text": "Введіть назву фотосесії",
@@ -220,7 +220,7 @@
       "text": "\uD83D\uDC4B\uD83D\uDE03 Welcome <b>{model_name}</b>, this is Your personal account, here You can update Your data, photo, view the account and contracts or request a call with Your agent\n\nYou can see the menu below",
       "keyboard": {
         "UpdateInformationButton": "Update information",
-        "UploadNewPictureButton": "Upload pictures",
+        "UploadNewPicturesButton": "Upload pictures",
         "DownloadGuidesButton": "Download guides",
         "SetUpTheCallButton": "Set up the call",
         "CheckYourStatusButton": "Check status"
@@ -350,7 +350,7 @@
         "K_links": "Links"
       }
     },
-    "upload_new_picture": {
+    "upload_new_pictures": {
       "uploading_steps": {
         "L_name": {
           "text": "Enter the name",

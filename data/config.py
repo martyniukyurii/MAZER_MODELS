@@ -5,6 +5,10 @@ from dotenv import load_dotenv
 import urllib.parse
 
 
+from google.oauth2.service_account import Credentials
+from googleapiclient.discovery import build
+
+
 load_dotenv()
 
 #DATABASE CONGIG
@@ -26,6 +30,15 @@ LOGIN = urllib.parse.quote_plus(LOGIN)
 PASSWORD = urllib.parse.quote_plus(PASSWORD)
 
 
+SCOPES = ["https://www.googleapis.com/auth/drive.file"]
+SERVICE_ACCOUNT_FILE = "credentials.json"  # Path to your credentials.json file
 
 
+credentials = Credentials.from_service_account_file(
+    SERVICE_ACCOUNT_FILE, scopes=SCOPES
+)
+drive_service = build("drive", "v3", credentials=credentials)
 
+# Temporary folder for saving photos
+TEMP_DIR = "temp_photos"
+os.makedirs(TEMP_DIR, exist_ok=True)

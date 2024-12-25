@@ -5,6 +5,7 @@ from handlers.users.start_functions_and_start_filters import login_start
 from handlers.users.handlers.agent_handlers.agent_events import (
     send_notification_to_agent,
 )
+from keyboards.inline.inline_keyboard import create_inline_keyboard_from_dict
 from handlers.users.db import find_in_db
 
 from data.config import lang
@@ -24,20 +25,22 @@ async def set_up_the_call(message: types.Message, state: FSMContext):
     l10 = lang.get(data.get("language")).get("set_up_the_call")
     await message.answer(
         l10.get("text"),
-        reply_markup=types.InlineKeyboardMarkup(
-            inline_keyboard=[
-                [
-                    types.InlineKeyboardButton(
-                        l10.get("keyboard").get("AgentButton"),
-                        callback_data="AgentButton",
-                    ),
-                    types.InlineKeyboardButton(
-                        l10.get("keyboard").get("OwnerButton"),
-                        callback_data="OwnerButton",
-                    ),
-                ]
-            ],
-        ),
+        reply_markup=create_inline_keyboard_from_dict(l10.get("keyboard")),
+        
+        # reply_markup=types.InlineKeyboardMarkup(
+        #     inline_keyboard=[
+        #         [
+        #             types.InlineKeyboardButton(
+        #                 l10.get("keyboard").get("AgentButton"),
+        #                 callback_data="AgentButton",
+        #             ),
+        #             types.InlineKeyboardButton(
+        #                 l10.get("keyboard").get("OwnerButton"),
+        #                 callback_data="OwnerButton",
+        #             ),
+        #         ]
+        #     ],
+        # ),
     )
 
 

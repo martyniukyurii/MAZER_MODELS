@@ -79,8 +79,8 @@ async def login_start(message: types.Message, state: FSMContext):
                             callback_data="UpdateInformationButton",
                         ),
                         types.InlineKeyboardButton(
-                            l10.get("keyboard").get("UploadNewPictureButton"),
-                            callback_data="UploadNewPictureButton",
+                            l10.get("keyboard").get("UploadNewPicturesButton"),
+                            callback_data="UploadNewPicturesButton",
                         ),
                     ],
                     [
@@ -168,7 +168,7 @@ def banned_users() -> list[str]:
 
 
 def admins() -> list[int]:
-    # return [617710378]   5048344988 617710378
+    # return [617710378]
     client = MongoClient(uri)  # Вкажіть свій URI
     db = client[DB_NAME]  # Назва вашої бази даних
     collection = db["Agents"]  # Назва колекції
