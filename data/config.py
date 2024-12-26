@@ -30,7 +30,7 @@ LOGIN = urllib.parse.quote_plus(LOGIN)
 PASSWORD = urllib.parse.quote_plus(PASSWORD)
 
 
-SCOPES = ["https://www.googleapis.com/auth/drive.file"]
+SCOPES = ["https://www.googleapis.com/auth/drive"]
 SERVICE_ACCOUNT_FILE = "credentials.json"  # Path to your credentials.json file
 
 

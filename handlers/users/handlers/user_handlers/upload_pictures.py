@@ -64,13 +64,8 @@ async def upload_photos_to_drive(message: types.Message, state: FSMContext):
     register_data: dict = data.get("register_data")
     user_full_name = register_data.get("B_full_name")
 
-    folder_id = get_or_create_user_folder(user_full_name)
+    folder_id = await get_or_create_user_folder(user_full_name)
     
-    # if message.media_group_id:
-    #     highest_resolution_photos = [photo[-1] for photo in message.photo]
-    # else:
-    #     highest_resolution_photos = [message.photo[-1]]
-        
     photo = message.photo[-1]
     file_id = photo.file_id
     file_info = await message.bot.get_file(file_id)
@@ -79,18 +74,18 @@ async def upload_photos_to_drive(message: types.Message, state: FSMContext):
     await message.bot.download_file(file_path, local_file_path)
 
     try:
-        upload_file_to_drive(folder_id, local_file_path, f"{file_id}.jpg")
+        await upload_file_to_drive(folder_id, local_file_path, f"{file_id}.jpg")
     finally:
         os.remove(local_file_path)
 
     await login_start(message, state)
 
 
-def get_telegram_bot_folder():
+async def get_folder_by_name(folder_name):
     response = (
         drive_service.files()
         .list(
-            q="mimeType='application/vnd.google-apps.folder' and name='telegram-bot'",
+            q=f"mimeType='application/vnd.google-apps.folder' and name='{folder_name}'",
             fields="files(id, name)",
         )
         .execute()
@@ -98,36 +93,39 @@ def get_telegram_bot_folder():
     folders = response.get("files", [])
     if folders:
         return folders[0]["id"]
-    raise FileNotFoundError("Folder 'telegram-bot' not found on Google Drive")
+    raise FileNotFoundError(f"Folder '{folder_name}' not found on Google Drive")
 
 
-def create_folder_on_drive(folder_name):
-    parent_folder_id = get_telegram_bot_folder()
+async def create_folder_on_drive(folder_name, parent_folder_id):
     file_metadata = {
         "name": folder_name,
         "mimeType": "application/vnd.google-apps.folder",
-        "parents": parent_folder_id,
+        "parents": [parent_folder_id],
     }
     folder = drive_service.files().create(body=file_metadata, fields="id").execute()
     return folder.get("id")
 
+async def delete_folder_from_drive(folder_id):
+    drive_service.files().delete(fileId=folder_id).execute()
 
-def get_or_create_user_folder(user_full_name):
+
+async def get_or_create_user_folder(user_full_name):
+    main_folder_id = await get_folder_by_name("folder") # тут назва основної папки на гугл драйві
     response = (
         drive_service.files()
         .list(
-            q=f"mimeType='application/vnd.google-apps.folder' and name='{user_full_name}'",
-            fields="files(id, name)",
+            q=f"mimeType='application/vnd.google-apps.folder' and name='{user_full_name}' and '{main_folder_id}' in parents",
+            fields="files(id, name, parents, shared)"
         )
         .execute()
     )
     folders = response.get("files", [])
     if folders:
         return folders[0]["id"]
-    return create_folder_on_drive(user_full_name)
+    return await create_folder_on_drive(user_full_name, main_folder_id)
 
 
-def upload_file_to_drive(folder_id, file_path, file_name):
+async def upload_file_to_drive(folder_id, file_path, file_name):
     print(f"Uploading file: {file_name}")
     print(f"To folder ID: {folder_id}")
     print(f"From path: {file_path}")
