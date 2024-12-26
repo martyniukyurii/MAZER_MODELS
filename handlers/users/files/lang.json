@@ -193,6 +193,9 @@
       },
       "success": "Ваш запит відправлено"
     },
+    "send_mailing": {
+      "text": "Ваш агент надіслав Вам повідомлення"
+    },
     "check_your_status": {
       "text": "",
       "keyboard": {
@@ -409,6 +412,9 @@
       },
       "success": "Your request has been sent"
     },
+    "send_mailing": {
+      "text": "Your agent sent You a message"
+    },
     "check_your_status": {
       "text": "",
       "keyboard": {
@@ -434,7 +440,9 @@
       "text": "Привіт Агент, вибери дію: ",
       "keyboard": {
         "SendMailingButton": "Розіслати повідомлення по моделям"
-      }
+      },
+      "success": "Повідомлення успішно розіслано",
+      "error": "Помилка: Повідомлення не було розіслано"
     },
     "agent_events": {
       "register_model": {
